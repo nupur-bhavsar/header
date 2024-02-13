@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Control Bar</title>
+<script src="https://kit.fontawesome.com/f7613cb3c5.js" crossorigin="anonymous"></script>
+
+<style>
+  body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+  }
+
+  .control-bar {
+    background-color: #333;
+    color: #fff;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .button-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 20px; /* Add margin to create space between button containers */
+  }
+
+  .button {
+    background-color: #555;
+    color: #fff;
+    border: none;
+    padding: 15px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+    width: 120px;
+    margin-top: 10px;
+  }
+
+  .button:hover {
+    background-color: #777;
+  }
+
+  .username {
+    color: #fff;
+    margin-right: 150px;
+    font-size: 20px;
+  }
+
+  .options {
+    margin-top: 20px; 
+    display: flex;
+    justify-content: space-between; 
+    align-items: center;
+  }
+
+  .grid {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    gap: 10px;
+  }
+
+  .grid .button {
+    width: 100%; /* Make buttons fill the grid cell */
+  }
+
+  .button img {
+    max-width: 100px; /* Limit the image size */
+    margin-bottom: 10px; /* Add space between image and button */
+  }
+
+</style>
+</head>
+<body>
+
+<div class="control-bar">
+  <div>
+    <button class="button" onclick="goHome()"><i class="fas fa-home"></i></button>
+    <span style="margin-right: 10px;"></span>
+    <button class="button" onclick="goPrevious()"><i class="fas fa-arrow-left"></i></button>
+    <span style="margin-right: 10px;"></span>
+    <button class="button" onclick="goNext()"><i class="fas fa-arrow-right"></i></button>
+  </div>
+  <div class="username">Username:</div>
+</div>
+
+<div class="options">
+  <div class="grid">
+    <div class="button-container">
+      <img src="uploadingg.jpg" alt="Upload Image">
+      <button class="button" onclick="access()">Upload</button>
+    </div>
+  </div>
+  <div class="grid">
+    <div class="button-container">
+      <img src="downloadingg.jpg" alt="Access Image">
+      <button class="button" onclick="fetchData()">Access</button>
+    </div>
+  </div>
+  <div class="grid">
+    <div class="button-container">
+      <img src="logout.png" alt="Logout Image">
+      <button class="button" onclick="logout()">Logout</button>
+    </div>
+  </div>
+</div>
+
+<script>
+  function goHome() {
+    console.log("Going to home page...");
+  }
+  
+  function goPrevious() {
+    console.log("Going to previous page...");
+  }
+
+  function goNext() {
+    console.log("Going to next page...");
+  }
+
+  function access() {
+    console.log("Uploading...");
+  }
+
+  function fetchData() {
+    console.log("Accessing...");
+  }
+
+  function logout() {
+    console.log("Logging out...");
+  }
+</script>
+
+</body>
+</html>
